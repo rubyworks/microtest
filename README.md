@@ -31,7 +31,7 @@ end
 For drop in compatability with Test::Unit, load `microtest/test/unit`.
 
 ```ruby
-require 'microtest/test/unit'
+require 'microtest/unit'
 
 class ExampleTest < Test::Unit::TestCase
   ...

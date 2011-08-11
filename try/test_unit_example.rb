@@ -1,7 +1,7 @@
-require 'microtest'
+require 'microtest/unit'
 require 'microtest/assertions'
 
-class ExampleTest < MicroTest::TestCase
+class ExampleTest < Test::Unit::TestCase
 
   def setup
     @a = 1
@@ -12,3 +12,4 @@ class ExampleTest < MicroTest::TestCase
   end
 
 end
+
