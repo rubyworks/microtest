@@ -2,9 +2,12 @@
 
 require 'yaml'
 
-Gem::Specification.new do |gemspec|
+metadata = YAML.load_file('.ruby')
 
-  manifest = Dir.glob('manifest{,.txt)', File::FNM_CASEFOLD).first
+manifest = Dir.glob('manifest{,.txt}', File::FNM_CASEFOLD).first
+
+
+Gem::Specification.new do |gemspec|
 
   scm = case
         when File.directory?('.git')
@@ -14,7 +17,7 @@ Gem::Specification.new do |gemspec|
   files = case
           when manifest
            File.readlines(manifest).
-             map{ |line| line.srtip }.
+             map{ |line| line.strip }.
              reject{ |line| line.empty? || line[0,1] == '#' }
           when scm == :git
            `git ls-files -z`.split("\0")
@@ -46,8 +49,6 @@ Gem::Specification.new do |gemspec|
                  File.basename(path)
                end
 
-  metadata = YAML.load_file('.ruby')
-
   # build-out the gemspec
 
   case metadata['revision']
@@ -69,38 +70,21 @@ Gem::Specification.new do |gemspec|
       end
     end
 
-    gemspec.licenses = metadata['licenses']
+    gemspec.licenses = metadata['copyrights'].map{ |c| c['license'] }.compact
 
     metadata['requirements'].each do |req|
       name    = req['name']
       version = req['version']
       groups  = req['groups'] || []
 
-      if md = /^(.*?)([+-~])$/.match(version)
-        version = case md[2]
-                    when '+' then ">= #{$1}"
-                    when '-' then "< #{$1}"
-                    when '~' then "~> #{$1}"
-                    else version
-                  end
+      case version
+      when /^(.*?)\+$/
+        version = ">= #{$1}"
+      when /^(.*?)\-$/
+        version = "< #{$1}"
+      when /^(.*?)\~$/
+        version = "~> #{$1}"
       end
-
-      #development = req['development']
-      #if development
-      #  # populate development dependencies
-      #  if gemspec.respond_to?(:add_development_dependency)
-      #    gemspec.add_development_dependency(name,*version)
-      #  else
-      #    gemspec.add_dependency(name,*version)
-      #  end
-      #else
-      #  # populate runtime dependencies  
-      #  if gemspec.respond_to?(:add_runtime_dependency)
-      #    gemspec.add_runtime_dependency(name,*version)
-      #  else
-      #    gemspec.add_dependency(name,*version)
-      #  end
-      #end
 
       if groups.empty? or groups.include?('runtime')
         # populate runtime dependencies  
