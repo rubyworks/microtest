@@ -11,4 +11,8 @@ class ExampleTest < MicroTest::TestCase
     assert_equal(1, @a)
   end
 
+  def test_another_example
+    assert_kind_of(Integer, @a)
+  end
+
 end

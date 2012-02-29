@@ -1,10 +1,9 @@
-#!mast .ruby .yaropts bin lib spec test [A-Z][A-Z]*
+#!mast .ruby .yaropts bin lib spec test [A-Z]*.*
 .ruby
 lib/microtest/assertions.rb
 lib/microtest/testunit.rb
 lib/microtest.rb
-PROFILE
+test/test_case.rb
 HISTORY.md
 README.md
-VERSION
 COPYING.rdoc

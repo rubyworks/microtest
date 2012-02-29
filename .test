@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+Test.run :default do |run|
+  run.files << 'test/test_*.rb'
+
+  require 'microtest'
+  require 'microtest/assertions'
+end
+
+Test.run(:cov) do |run|
+  run.files << 'test/test_*.rb'
+
+  require 'simplecov'
+
+  SimpleCov.start do
+    require 'microtest'
+    require 'microtest/assertions'
+
+    coverage_dir 'log/coverage'
+  end
+end
+

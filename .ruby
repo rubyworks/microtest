@@ -1,49 +1,47 @@
---- 
-authors: 
+---
+source:
+- PROFILE
+- VERSION
+authors:
 - name: Thomas Sawyer
   email: transfire@gmail.com
-copyrights: 
+copyrights:
 - holder: Thomas Sawyer
-  year: "2011"
+  year: '2011'
   license: BSD-2-Clause
-replacements: []
-
-conflicts: []
-
-requirements: 
+requirements:
 - name: test
 - name: detroit
-  groups: 
+  groups:
   - build
   development: true
 - name: reap
-  groups: 
+  groups:
   - build
   development: true
 - name: qed
-  groups: 
+  groups:
   - test
   development: true
 dependencies: []
-
-repositories: 
+alternatives: []
+conflicts: []
+repositories:
 - uri: git://github.com/proutils/microtest.git
   scm: git
   name: upstream
-resources: 
+resources:
   home: http://rubyworks.github.com/microtest
   code: http://github.com/rubyworks/microtest
-load_path: 
+extra: {}
+load_path:
 - lib
-extra: 
-  manifest: MANIFEST
-alternatives: []
-
 revision: 0
 name: microtest
 title: MicroTest
 summary: Microminal TestUnit-style Test Framework
-description: MicroTest is very small Test::Unit/MiniTest compatbile test framework that run on top of the Ruby Universal Test Harness (Ruby Test).
+description: MicroTest is very small Test::Unit/MiniTest compatbile test framework
+  that run on top of the Ruby Universal Test Harness (Ruby Test).
 organization: RubyWorks
 version: 0.1.1
-date: "2011-08-12"
+date: '2012-02-29'
