@@ -1,20 +1,26 @@
-# Microtest
+# MicroTest
 
 ## Description
 
-Microtest is a minimal Test::Unit and MiniTest campatible 
+MicroTest is a minimal Test::Unit and MiniTest compatible 
 test framework that runs on top of Ruby Test.
 
 ## Synopsis
 
-Microtests are written in the same manner as Ruby's standard
-test framework(s).
+Tests are written in the same manner as they are for Ruby's
+traditional test framework(s). The only significant difference
+is that an assertions framework library needs to be required
+along with the test library itself. MicroTest comes with a 
+traditional assertions system for backward compatability
+with TestUnit and MiniTest. Simply require `microtest/assertion`
+to get it. Alternatively any BRASS compliant assertion framework
+can be used.
 
 ```ruby
 require 'microtest'
-require 'microtest/assertions'  # for legacy assertion methods
+require 'microtest/assertions'
 
-class ExampleTest < Microtest::TestCase
+class ExampleTest < MicroTest::TestCase
 
   #
   def setup
@@ -29,7 +35,7 @@ class ExampleTest < Microtest::TestCase
 end
 ```
 
-For drop in compatability with Test::Unit, load `microtest/testunit`.
+For drop in compatibility with Test::Unit, load `microtest/testunit`.
 
 ```ruby
 require 'microtest/testunit'
@@ -44,7 +50,7 @@ end
 
 Copyright (c) 2011 Thomas Sawyer, Rubyworks
 
-Microtest is distributes under the terms of the **FreeBSD** license.
+MicroTest is distributes under the terms of the **FreeBSD** license.
 
 See License.txt for details.
 
