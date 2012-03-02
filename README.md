@@ -53,6 +53,15 @@ class ExampleTest < Test::Unit::TestCase
 end
 ```
 
+To run tests use the `rubytest` command line utility.
+
+```
+$ rubytest -Ilib test/test_example.rb
+```
+
+See [RubyTest](http://rubyworks.github.com/rubytest) for more details on this.
+
+
 ## License
 
 Copyright (c) 2011 Rubyworks
