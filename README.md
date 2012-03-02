@@ -5,7 +5,14 @@
 MicroTest is a minimal Test::Unit and MiniTest compatible 
 test framework that runs on top of Ruby Test.
 
-## Synopsis
+## Installation
+
+Using Rubygems:
+
+    $ gem install microtest
+
+
+## Instruction
 
 Tests are written in the same manner as they are for Ruby's
 traditional test framework(s). The only significant difference
