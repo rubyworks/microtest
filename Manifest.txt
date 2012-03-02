@@ -4,6 +4,6 @@ lib/microtest/assertions.rb
 lib/microtest/testunit.rb
 lib/microtest.rb
 test/test_case.rb
-HISTORY.md
 README.md
-COPYING.rdoc
+History.md
+License.txt

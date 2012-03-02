@@ -11,6 +11,7 @@ MicroTests are written in the same manner as Ruby's standard
 test framework(s).
 
 ```ruby
+require 'microtest'
 require 'microtest/assertions'  # for legacy assertion methods
 
 class ExampleTest < MicroTest::TestCase
@@ -32,17 +33,18 @@ For drop in compatability with Test::Unit, load `microtest/testunit`.
 
 ```ruby
 require 'microtest/testunit'
+require 'microtest/assertions'
 
 class ExampleTest < Test::Unit::TestCase
   ...
 end
 ```
 
-# Copyrights and Licensing
+## License
 
 Copyright (c) 2011 Thomas Sawyer, Rubyworks
 
 MicroTest is distributes under the terms of the **FreeBSD** license.
 
-See COPYING.rdoc for more information.
+See License.txt for details.
 
