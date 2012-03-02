@@ -48,7 +48,7 @@ end
 
 ## License
 
-Copyright (c) 2011 Thomas Sawyer, Rubyworks
+Copyright (c) 2011 Rubyworks
 
 MicroTest is distributes under the terms of the **FreeBSD** license.
 
