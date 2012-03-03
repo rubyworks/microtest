@@ -40,10 +40,10 @@ summary: Microminal TestUnit-style Test Framework
 title: MicroTest
 version: 0.2.0
 name: microtest
-description: ! 'MicroTest is very small Test::Unit/MiniTest compatbile
+description: ! 'MicroTest is a very small Test::Unit/MiniTest compatbile
 
-  test framework that run on top of the Ruby Universal
+  test framework that runs on top of RubyTest, a Universal
 
-  Test Harness (Ruby Test).'
+  Test Harness for Ruby.'
 organization: Rubyworks
 date: '2012-03-02'
