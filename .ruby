@@ -38,7 +38,7 @@ load_path:
 revision: 0
 summary: Microminal TestUnit-style Test Framework
 title: MicroTest
-version: 0.2.0
+version: 0.2.1
 name: microtest
 description: ! 'MicroTest is a very small Test::Unit/MiniTest compatbile
 

@@ -1,5 +1,14 @@
 # Release History
 
+## 0.2.1 / 2012-03-04
+
+This release simply fixes assert_raises assertion method.
+
+Changes:
+
+* Fix assert_raises assertion in assertions.rb.
+
+
 ## 0.2.0 / 2012-03-03
 
 Fix setup and teardown procedures os they run before and after each test,
