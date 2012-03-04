@@ -224,13 +224,13 @@ module MicroTest
       msg = (Module === args.last ? nil : args.pop)
       begin
         yield
-        msg = "Expected #{exp} to be raised" unless msg
+        msg = "Expected one of #{args.join(', ')} to be raised" unless msg
         __assert__(false, msg)
-      rescue Exception => e
-        test = (exp === e)
-        msg  = "Expected #{exp} to be raised, but got #{e.class}" unless msg
+      rescue Exception => err
+        test = args.any?{ |e| e === err }
+        msg  = "Expected one of #{args.join(', ')} to be raised, but got #{err.class}" unless msg
         __assert__(test, msg)
-        return e
+        return err
       end
     end
 
