@@ -4,10 +4,9 @@
 [![Build Status](https://secure.travis-ci.org/rubyworks/microtest.png)](http://travis-ci.org/rubyworks/microtest) &nbsp; &nbsp;
 [![Flattr Me](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/324911/Rubyworks-Ruby-Development-Fund)
 
-[Website](http://rubyworks.github.com/microtest) /
-[API](http://rubydoc.info/gems/microtest) /
-[User Guide](http://wiki.github.com/rubyworks/microtest) /
-[Report Issue](http://github.com/rubyworks/microtest/issues) /
+[Website](http://rubyworks.github.com/microtest) &middot;
+[API](http://rubydoc.info/gems/microtest) &middot;
+[Report Issue](http://github.com/rubyworks/microtest/issues) &middot;
 [Source Code](http://github.com/rubyworks/microtest)
 
 
