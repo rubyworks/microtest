@@ -1,9 +1,21 @@
 # MicroTest
 
+[![Gem Version](https://badge.fury.io/rb/microtest.png)](http://badge.fury.io/rb/microtest)
+[![Build Status](https://secure.travis-ci.org/rubyworks/microtest.png)](http://travis-ci.org/rubyworks/microtest) &nbsp; &nbsp;
+[![Flattr Me](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/324911/Rubyworks-Ruby-Development-Fund)
+
+[Website](http://rubyworks.github.com/microtest) /
+[API](http://rubydoc.info/gems/microtest) /
+[User Guide](http://wiki.github.com/rubyworks/microtest) /
+[Report Issue](http://github.com/rubyworks/microtest/issues) /
+[Source Code](http://github.com/rubyworks/microtest)
+
+
 ## Description
 
 MicroTest is a minimal Test::Unit and MiniTest compatible 
 test framework that runs on top of Ruby Test.
+
 
 ## Installation
 
@@ -55,9 +67,9 @@ end
 
 To run tests use the `rubytest` command line utility.
 
-```
-$ rubytest -Ilib test/test_example.rb
-```
+
+    $ rubytest -Ilib test/test_example.rb
+
 
 See [RubyTest](http://rubyworks.github.com/rubytest) for more details on this.
 
